@@ -1,15 +1,26 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "HTML Tree Generator",
-  "description": "Html is really a tree of elements, css is what defines the layout. This extension displays any page as a tree.",
+  "description": "Generate a tree representation of the HTML DOM for the current page.",
   "version": "1.0",
-  "browser_action": {
-      "default_popup": "popup.html"
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
   },
-  "icons": {"16": "icon16.png",
-           "48": "icon48.png",
-          "128": "icon128.png" },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
   "permissions": [
+    "scripting",
     "activeTab"
+  ],
+  "host_permissions": [
+    "<all_urls>"
   ]
 }
